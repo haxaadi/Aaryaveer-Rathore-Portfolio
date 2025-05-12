@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aaryaveer Rathore | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background-color: #0d0d0d;
+      color: #00ffe1;
+      overflow-x: hidden;
+    }
+    header {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      background: radial-gradient(circle at center, #1a1a1a, #000);
+    }
+    .terminal {
+      font-size: 1.2rem;
+      color: #00ffe1;
+      text-shadow: 0 0 10px #00ffe1;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #00ffe1;
+      width: 0;
+      animation: typing 4s steps(40, end) forwards, blink 1s step-end infinite;
+    }
+    @keyframes typing {
+      to { width: 22ch; }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #111;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #00ffe1;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ff4081;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid #00ffe1;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #00ffe1;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 15px #ff4081;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #111;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    .btn {
+      padding: 0.8rem 1.6rem;
+      border: none;
+      background-color: #00ffe1;
+      color: #000;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 2rem;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background-color: #ff4081;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="terminal">> Welcome, Aaryaveer Rathore...</div>
+    <button class="btn" onclick="scrollToSection('about')">Enter Portfolio</button>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="card">
+    <h2>About Me</h2>
+    <p>I am a B.Tech Computer Science student at South Asian University, passionate about AI, prompt engineering, and building impactful tech. CGPA: 8.4/10.</p>
+  </section>
+
+  <section id="projects" class="card">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>AI Resume Analyzer</strong> – Uses OpenAI API to evaluate resumes.</li>
+      <li><strong>Smart E-Commerce Recommender</strong> – Suggests products based on history.</li>
+      <li><strong>Face Recognition Attendance System</strong> – Auto attendance via OpenCV.</li>
+      <li><strong>Campus Chatbot</strong> – Answers FAQs with Dialogflow.</li>
+    </ul>
+  </section>
+
+  <section id="skills" class="card">
+    <h2>Skills</h2>
+    <p>Python, C, HTML/CSS, OpenCV, Scikit-learn, Git, GitHub, Prompt Engineering, Public Speaking.</p>
+  </section>
+
+  <section id="contact" class="card">
+    <h2>Contact</h2>
+    <p>Email: aaryaveerrathore@gmail.com</p>
+    <p>Phone: 7799339922</p>
+    <p><a href="https://www.linkedin.com/in/aaryaveer-rathore-60655b327/" target="_blank">LinkedIn Profile</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Aaryaveer Rathore | Designed with 💻
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
